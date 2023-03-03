@@ -35,15 +35,15 @@ isInOrder("xyzz") ➞ true
 isInOrder("d") ➞ true
 ```
 
-#### Methods 2
-Given a string, return the sum of the numbers appearing in the string, ignoring all other characters. A number is a series of 1 or more digit chars in a row. (Note: Character.isDigit(char) tests if a char is one of the chars '0', '1', .. '9'. Integer.parseInt(string) converts a string to an int.)
-**Signature** `public static int sumNumbers(String str)`
+#### Methods 2 - dnaToRna
+Transcribe the given DNA strand into corresponding mRNA - a type of RNA, that will be formed from DNA after transcription. DNA has the bases A, T, G and C, while RNA converts to U, A, C and G respectively.
+<br>**Signature** `public static String dnaToRna(String strand)`
 
 #### Examples
 ```
-sumNumbers("abc123xyz") → 123
-sumNumbers("aa11b33") → 44
-sumNumbers("7 11") → 18
+dnaToRna("ATTAGCGCGATATACGCGTAC") ➞ "UAAUCGCGCUAUAUGCGCAUG"
+dnaToRna("CGATATA") ➞ "GCUAUAU"
+dnaToRna("GTCATACGACGTA") ➞ "CAGUAUGCUGCAU"
 ```
 
 #### Methods 3
