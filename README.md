@@ -35,47 +35,48 @@ isInOrder("xyzz") ➞ true
 isInOrder("d") ➞ true
 ```
 
-#### Methods 2 - dnaToRna
-Transcribe the given DNA strand into corresponding mRNA - a type of RNA, that will be formed from DNA after transcription. DNA has the bases A, T, G and C, while RNA converts to U, A, C and G respectively.
-<br>**Signature** `public static String dnaToRna(String strand)`
+#### Methods 2 - balanced
+We can assign a value to each character in a word, based on their position in the alphabet (a = 1, b = 2, ... , z = 26). A balanced word is one where the sum of values on the left-hand side of the word equals the sum of values on the right-hand side. For odd length words, the middle character (balance point) is ignored.
+<br>**Signature** `public static boolean balanced(String word)`
 
 #### Examples
 ```
-dnaToRna("ATTAGCGCGATATACGCGTAC") ➞ "UAAUCGCGCUAUAUGCGCAUG"
-dnaToRna("CGATATA") ➞ "GCUAUAU"
-dnaToRna("GTCATACGACGTA") ➞ "CAGUAUGCUGCAU"
+balanced("zips") ➞ true
+// "zips" = "zi|ps" = 26+9|16+19 = 35|35 = true
+
+balanced("brake") ➞ false
+// "brake" = "br|ke" = 2+18|11+5 = 20|16 = false
 ```
 
-#### Methods 3
-Given a string, does "xyz" appear in the middle of the string? To define middle, we'll say that the number of chars to the left and right of the "xyz" must differ by at most one.
-**Signature** `public static boolean xyzMiddle(String str) `
+#### Methods 3 - noRepeat
+Create a function that will remove any repeated character(s) in a word passed to the function. Not just consecutive characters, but characters repeating anywhere in the string.
+**Signature** `public static boolean noRepeat(String str) `
 
 #### Examples
 ```
-xyzMiddle("AAxyzBB") → true
-xyzMiddle("AxyzBB") → true
-xyzMiddle("AxyzBBB") → false
+noRepeat("teshahset") ➞ "tesha"
+noRepeat("hello") ➞ "helo"
+noRepeat("aaaaa") ➞ "a"
+noRepeat("WWE!!!") ➞ "WE!"
+noRepeat("call 911") ➞ "cal 91"
 ```
 
 ### File IO
 
-#### File IO - Read 1
-Write a method `longestWord(String filenametxt)` such that given the name of a file `filenametxt` that contains a single word on each line,  returns the longest word in the file.  
-**Signature** `public static String longestWord(String filenametxt)`
+#### File IO - iqRange
+Given the name of a text file that contains a list of *sorted* random numbers between 1-1000, write a method that returns the [interquartile range](https://latrobe.libguides.com/maths/measures-of-variability) of the values.  
+**Signature** `public static String iqRange(String filenametxt)`
 
 #### Example
-words.txt contains:  
+input.txt contains:  
 ```
-Lorem
-ipsum
-dolor
-sit
-amet
-consectetur
-adipiscing 
-elit
+5
+6
+7
+8
+9
 ```
-`longestWord("words.txt")` --> `consectetur`
+`iqRange("intput.txt")` --> 2
 
 #### File IO - Read 2
 Write a method `alphaWord(String filenametxt)` such that given the name of a file `filenametxt` that contains a single word on each line,  returns the word that is alphabetically first.  
