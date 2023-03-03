@@ -21,16 +21,18 @@ Program the solutions for each problem in a single `Utility.java` file in  `src/
 ### Methods
 
 
-#### Methods 1
+#### Methods 1 - isInOrder
 
-We'll say that a String is xy-balanced if for all the 'x' chars in the string, there exists a 'y' char somewhere later in the string. So "xxy" is balanced, but "xyx" is not. One 'y' can balance multiple 'x's. Return true if the given string is xy-balanced.
-**Signature** `public static boolean xyBalance(String str) `
+Create a method that takes a string and returns true or false, depending on whether the characters are in order or not. 
+<br>**Signature** `public static boolean isInOrder(String str) `
 
 ##### Examples
 ```
-xyBalance("aaxbby") → true
-xyBalance("aaxbb") → false
-xyBalance("yaaxbb") → false
+isInOrder("abc") ➞ true
+isInOrder("edabit") ➞ false
+isInOrder("123") ➞ true
+isInOrder("xyzz") ➞ true
+isInOrder("d") ➞ true
 ```
 
 #### Methods 2
