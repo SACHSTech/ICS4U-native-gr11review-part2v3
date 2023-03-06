@@ -5,7 +5,7 @@ Program the solutions for each problem in a single `Utility.java` file in  `src/
 
 ### a) Code Solutions
 * within a group of two or three, each of your coding to your own branch, code your solutions in VS Code.
-* Each member must pick a problem from each section (Methods, FileIO, Arrays - Part A, Arrays - Part B)
+* Each member must pick a problem from each section (Methods, FileIO, Arrays - Part A, Arrays - Part B).  Group members cannot pick the same problem.
 * commit and push changes to appropriate development branches in github.
 * merge tested and completed solutions to the main branch.
 * use proper style conventions for variable names and comments.
@@ -19,7 +19,6 @@ Program the solutions for each problem in a single `Utility.java` file in  `src/
 ## Problem Sets
 
 ### Methods
-
 
 #### Methods 1 - isInOrder
 
@@ -62,8 +61,6 @@ noRepeat("call 911") ➞ "cal 91"
 ```
 
 ### File IO
-
-
 
 #### File IO 1 - variance
 Given the name of a text file that contains a list of random numbers between 1-1000, write a method that returns the [variance](https://latrobe.libguides.com/maths/measures-of-variability#s-lib-ctab-21952082-2) of the values.
@@ -187,7 +184,7 @@ sameUnique([9, 8, 7, 6], [4, 4, 3, 1]) ➞ false
 sameUnique([2], [3, 3, 3, 3, 3]) ➞ true
 ```
 
-#### Array B3 - fulcrum
+#### Array B3 - findFulcrum
 A fulcrum of a list is an integer such that all elements to the left of it and all elements to the right of it sum to the same value. Write a function that finds the fulcrum of a list.
 <br>**Signature** public static int findFulcrum(int[] arr)
 
