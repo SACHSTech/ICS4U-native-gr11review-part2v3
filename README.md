@@ -47,17 +47,16 @@ balanced("brake") ➞ false
 // "brake" = "br|ke" = 2+18|11+5 = 20|16 = false
 ```
 
-#### Methods 3 - noRepeat
-Create a function that will remove any repeated character(s) in a word passed to the function. Not just consecutive characters, but characters repeating anywhere in the string.
-<br>**Signature** `public static boolean noRepeat(String str) `
+#### Methods 3 - swapPairs
+Write a function that swaps the first pair (1st and 2nd characters) with the second pair (3rd and 4th characters) for every quadruplet substring.
+<br>**Signature** `public static String swapPair(String str) `
 
 #### Examples
 ```
-noRepeat("teshahset") ➞ "tesha"
-noRepeat("hello") ➞ "helo"
-noRepeat("aaaaa") ➞ "a"
-noRepeat("WWE!!!") ➞ "WE!"
-noRepeat("call 911") ➞ "cal 91"
+swapPair("ABCDEFGH") ➞ "CDABGHEF"
+swapPair("AABBCCDDEEFF") ➞ "BBAADDCCFFEE"
+swapPair("munchkins") ➞ "ncmuinhks"
+swapPair("FFGGHHI") ➞ "GGFFHHI"
 ```
 
 ### File IO
