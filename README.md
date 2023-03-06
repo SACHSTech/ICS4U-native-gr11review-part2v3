@@ -64,7 +64,7 @@ noRepeat("call 911") ➞ "cal 91"
 ### File IO
 
 #### File IO - iqRange
-Given the name of a text file that contains a list of *sorted* random numbers between 1-1000, write a method that returns the [interquartile range](https://latrobe.libguides.com/maths/measures-of-variability) of the values.  
+Given the name of a text file that contains a list of *sorted* random numbers between 1-1000, write a method that returns the [interquartile range](https://latrobe.libguides.com/maths/measures-of-variability#s-lib-ctab-21952082-1) of the values.  
 **Signature** `public static String iqRange(String filenametxt)`
 
 #### Example
@@ -78,42 +78,19 @@ input.txt contains:
 ```
 `iqRange("intput.txt")` --> 2
 
-#### File IO - Read 2
-Write a method `alphaWord(String filenametxt)` such that given the name of a file `filenametxt` that contains a single word on each line,  returns the word that is alphabetically first.  
-**Signature** `public static String alphaWord(String filenametxt)`
+#### File IO - variance
+Given the name of a text file that contains a list of random numbers between 1-1000, write a method that returns the [variance](https://latrobe.libguides.com/maths/measures-of-variability#s-lib-ctab-21952082-2) of the values.  
+<br>**Signature** `public static String variance(String filenametxt)`
 
 ##### Example
-words.txt contains:  
-```
-Lorem
-ipsum
-dolor
-sit
-amet
-consectetur
-adipiscing 
-elit
-```
-`alphaWord("words.txt")` --> `amet`
+See the [example calculations here](https://latrobe.libguides.com/maths/measures-of-variability#s-lib-ctab-21952082-2).  Test variance calculations against a data set using this [variance calculator](https://www.calculatorsoup.com/calculators/statistics/variance-calculator.php). 
 
-#### File IO - Read 3
-Write a method `vowelCount(String filenametxt)` such that given the name of a file `filenametxt` that contains a single word on each line,  returns the word that has the highest count of vowels.  
-**Signature** `public static String vowelCount(String filenametxt)`
+#### File IO - stDeviation
+Given the name of a text file that contains a list of random numbers between 1-1000, write a method that returns the [standard deviation](https://latrobe.libguides.com/maths/measures-of-variability#s-lib-ctab-21952082-3) of the values.  
+<br>**Signature** `public static String variance(String filenametxt)`
 
 ##### Example
-words.txt contains:  
-```
-Lorem
-ipsum
-dolor
-sit
-amet
-consectetur
-adipiscing 
-elit
-```
-`vowelCount("words.txt")` --> `consectetur`
-
+See the [example calculations here](https://latrobe.libguides.com/maths/measures-of-variability#s-lib-ctab-21952082-3).  Test standard deviation calculations against a data set using this [standard deviation calculator](https://www.calculatorsoup.com/calculators/statistics/standard-deviation-calculator.php). 
 
 
 ### Arrays - One Dimensional, 1 Loop
