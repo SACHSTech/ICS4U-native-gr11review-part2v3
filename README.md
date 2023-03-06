@@ -1,26 +1,34 @@
 # Grade 11 Java Review Part 2
 
-## Instructions
-Program the solutions for each problem in a single `Utility.java` file in  `src/gr11review/part2 directory`.  You are required to:
+### Step 1: Form Group and Assign Problems
+* Form a group of two or three members.
+* Create a team repository by clicking on the assignment repository generator.
+* There are four sections of problems  - Strings, FileIO, Arrays - Part A, Arrays - Part B. The first member will do the first problem in each section i.e String 1, FileIO 1, etc.  Likewise, the second member will do the second problem in each section, and so on with the third member.
 
-### a) Code Solutions
-* within a group of two or three, each of your coding to your own branch, code your solutions in VS Code.
-* Each member must pick a problem from each section (Methods, FileIO, Arrays - Part A, Arrays - Part B).  Group members cannot pick the same problem.
-* commit and push changes to appropriate development branches in github.
-* merge tested and completed solutions to the main branch.
-* use proper style conventions for variable names and comments.
+### Step 2: String Problems - TDD
+For the first section - Strings - you will do this in the style of TDD (Test-Driven Development).  First, be sure to have a sense of what you want to test (i.e consider general and unusual cases). Next, you will **record a video** as you work through the problem using TDD, that is, repeatedly writing a test and then coding to pass that test.  
 
-### b) Test Solutions
-* Create a test class `UtilityTest.java` in the `src/gr11review/part2` directory.
-* With the concepts of the [Types of Tests](https://docs.google.com/document/d/1vkqcF0oocKygmTJXlBd0Izqau0to38rfG7u7gnBGw10/edit?usp=sharing), define test methods to thoroughly test the functionality of your solution methods. 
+<BR>Be sure to:
+* write your tests in UtilityTest.java and your solutions in Utility.java.
+* commit after each *passing* test
+* upload your video to the assignment
+  
+### Step 3: The Other sections
+In the remain problem sections (FileIO, Array - Part A, Array - Part B), you can choose to do it using TDD or code your solutions and write your tests after.  You do not need to record videos for these sections.  There should be at least a commit per method (including test methods).
+  
+### Program Style & Project Management
+* Be sure to use proper style conventions for variable names and comments.
+* All methods, including test methods, should be preceded with javadoc comment.
 * Name your test methods using the name of the solution method + "Test" + test case #.  For example, if your solution method in `Utility.java` is called `abc()`, there should be corresponding test methods in `UtilityTest.java` called `abcTest1(), abcTest2(), abcTest3() ...` etc.
-* tests methods should also be created by each member in their development branch and merged into the main branch.
+* all work (testing and solutions) must be done on your development branch and then merged into the main branch upon completing your work.  
+  
+-------------------
 
 ## Problem Sets
 
-### Methods
+### Strings
 
-#### Methods 1 - isInOrder
+#### Strings 1 - isInOrder
 
 Create a method that takes a string and returns true or false, depending on whether the characters are in order or not. 
 <br>**Signature** `public static boolean isInOrder(String str) `
@@ -34,7 +42,7 @@ isInOrder("xyzz") ➞ true
 isInOrder("d") ➞ true
 ```
 
-#### Methods 2 - balanced
+#### Strings 2 - balanced
 We can assign a value to each character in a word, based on their position in the alphabet (a = 1, b = 2, ... , z = 26). A balanced word is one where the sum of values on the left-hand side of the word equals the sum of values on the right-hand side. For odd length words, the middle character (balance point) is ignored.
 <br>**Signature** `public static boolean balanced(String word)`
 
@@ -47,7 +55,7 @@ balanced("brake") ➞ false
 // "brake" = "br|ke" = 2+18|11+5 = 20|16 = false
 ```
 
-#### Methods 3 - swapPairs
+#### Strings 3 - swapPairs
 Write a function that swaps the first pair (1st and 2nd characters) with the second pair (3rd and 4th characters) for every quadruplet substring.
 <br>**Signature** `public static String swapPair(String str) `
 
