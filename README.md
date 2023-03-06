@@ -49,7 +49,7 @@ balanced("brake") ➞ false
 
 #### Methods 3 - noRepeat
 Create a function that will remove any repeated character(s) in a word passed to the function. Not just consecutive characters, but characters repeating anywhere in the string.
-**Signature** `public static boolean noRepeat(String str) `
+<br>**Signature** `public static boolean noRepeat(String str) `
 
 #### Examples
 ```
