@@ -55,7 +55,7 @@ balanced("brake") ➞ false
 // "brake" = "br|ke" = 2+18|11+5 = 20|16 = false
 ```
 
-#### Strings 3 - swapPairs
+#### Strings 3 - swapPair
 Write a function that swaps the first pair (1st and 2nd characters) with the second pair (3rd and 4th characters) for every quadruplet substring.
 <br>**Signature** `public static String swapPair(String str) `
 
