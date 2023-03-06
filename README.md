@@ -5,7 +5,7 @@ Program the solutions for each problem in a single `Utility.java` file in  `src/
 
 ### a) Code Solutions
 * within a group of two or three, each of your coding to your own branch, code your solutions in VS Code.
-* Each member must pick a problem from each section (Methods, FileIO, Array - One Dimensional 1 Loop, Array - One Dimensional 2 Loops, Two Dimensional Arrays)
+* Each member must pick a problem from each section (Methods, FileIO, Arrays - Part A, Arrays - Part B)
 * commit and push changes to appropriate development branches in github.
 * merge tested and completed solutions to the main branch.
 * use proper style conventions for variable names and comments.
@@ -63,9 +63,25 @@ noRepeat("call 911") ➞ "cal 91"
 
 ### File IO
 
-#### File IO - iqRange
-Given the name of a text file that contains a list of *sorted* random numbers between 1-1000, write a method that returns the [interquartile range](https://latrobe.libguides.com/maths/measures-of-variability#s-lib-ctab-21952082-1) of the values.  
-**Signature** `public static String iqRange(String filenametxt)`
+
+
+#### File IO 1 - variance
+Given the name of a text file that contains a list of random numbers between 1-1000, write a method that returns the [variance](https://latrobe.libguides.com/maths/measures-of-variability#s-lib-ctab-21952082-2) of the values.
+<br>**Signature** `public static String variance(String filenametxt)`
+
+##### Example
+See the [example calculations here](https://latrobe.libguides.com/maths/measures-of-variability#s-lib-ctab-21952082-2).  Test variance calculations against a data set using this [variance calculator](https://www.calculatorsoup.com/calculators/statistics/variance-calculator.php). 
+
+#### File IO 2 - stDeviation
+Given the name of a text file that contains a list of random numbers between 1-1000, write a method that returns the [standard deviation](https://latrobe.libguides.com/maths/measures-of-variability#s-lib-ctab-21952082-3) of the values.
+<br>**Signature** `public static String variance(String filenametxt)`
+
+##### Example
+See the [example calculations here](https://latrobe.libguides.com/maths/measures-of-variability#s-lib-ctab-21952082-3).  Test standard deviation calculations against a data set using this [standard deviation calculator](https://www.calculatorsoup.com/calculators/statistics/standard-deviation-calculator.php). 
+
+#### File IO 3 - iqRange
+Given the name of a text file that contains a list of *sorted* random numbers between 1-1000, write a method that returns the [interquartile range](https://latrobe.libguides.com/maths/measures-of-variability#s-lib-ctab-21952082-1) of the values.
+<br>**Signature** `public static String iqRange(String filenametxt)`
 
 #### Example
 input.txt contains:  
@@ -78,139 +94,120 @@ input.txt contains:
 ```
 `iqRange("intput.txt")` --> 2
 
-#### File IO - variance
-Given the name of a text file that contains a list of random numbers between 1-1000, write a method that returns the [variance](https://latrobe.libguides.com/maths/measures-of-variability#s-lib-ctab-21952082-2) of the values.  
-<br>**Signature** `public static String variance(String filenametxt)`
+
+### Arrays - Part A
+
+#### Arrays A1 - secondLargest
+Write a function that takes an array of integers and returns the second largest number.
+<br>**Signature** `public static int secondLargest(int[] num)`
 
 ##### Example
-See the [example calculations here](https://latrobe.libguides.com/maths/measures-of-variability#s-lib-ctab-21952082-2).  Test variance calculations against a data set using this [variance calculator](https://www.calculatorsoup.com/calculators/statistics/variance-calculator.php). 
+```
+secondLargest([10, 40, 30, 20, 50]) ➞ 40
+secondLargest([25, 143, 89, 13, 105]) ➞ 105
+secondLargest([54, 23, 11, 17, 10]) ➞ 23
+```
 
-#### File IO - stDeviation
-Given the name of a text file that contains a list of random numbers between 1-1000, write a method that returns the [standard deviation](https://latrobe.libguides.com/maths/measures-of-variability#s-lib-ctab-21952082-3) of the values.  
-<br>**Signature** `public static String variance(String filenametxt)`
+#### Arrays A2 - toTheTop
+Create a function that returns the total number of steps it takes to transform each element to the maximal element in the array. Each step consists of incrementing a digit by one.
+<br>**Signature** `public static int toTheTop(int[] arr)`
 
 ##### Example
-See the [example calculations here](https://latrobe.libguides.com/maths/measures-of-variability#s-lib-ctab-21952082-3).  Test standard deviation calculations against a data set using this [standard deviation calculator](https://www.calculatorsoup.com/calculators/statistics/standard-deviation-calculator.php). 
-
-
-### Arrays - One Dimensional, 1 Loop
-
-#### Array 1 - One Dimensional
-
-Return a version of the given array where all the 10's have been removed. The remaining elements should shift left towards the start of the array as needed, and the empty spaces a the end of the array should be 0. So `{1, 10, 10, 2}` yields `{1, 2, 0, 0}`. You may modify and return the given array or make a new array. 
-**Signature** `public static int[] withoutTen(int[] nums)`
-
-##### Examples
 ```
-withoutTen([1, 10, 10, 2]) → [1, 2, 0, 0]
-withoutTen([10, 2, 10]) → [2, 0, 0]
-withoutTen([1, 99, 10]) → [1, 99, 0]
-```
+totheTop([3, 4, 5]) ➞ 3
+// Maximal element in the array is 5.
+// To transform 3 to 5 requires 2 steps: 3 -> 4, 4 -> 5.
+// To transform 4 to 5 requires 1 step: 4 -> 5.
+// Total steps required is 3.
 
-#### Array 2 - One Dimensional
-We'll say that an element in an array is "alone" if there are values before and after it, and those values are different from it. Return a version of the given array where every instance of the given value which is alone is replaced by whichever value to its left or right is larger.
-public int[] notAlone(int[] nums, int val)  
-**Signature** `public static int[] notAlone(int[] nums, int value)`
+totheTop([4, 3, 4]) ➞ 1
+// Maximal element in the array is 4.
+// To transform 3 to 4 requires 1 steps: 3 -> 4.
+// Total steps required is 1.
 
-##### Examples
-```
-notAlone([1, 2, 3], 2) → [1, 3, 3]
-notAlone([1, 2, 3, 2, 5, 2], 2) → [1, 3, 3, 5, 5, 2]
-notAlone([3, 4], 3) → [3, 4]
+totheTop([3, 3, 3]) ➞ 0
+
+totheTop([3, 10, 3]) ➞ 14
 ```
 
-#### Array 3 - One Dimensional
-
-Return an array that contains the exact same numbers as the given array, but rearranged so that all the zeros are grouped at the start of the array. The order of the non-zero numbers does not matter. So `{1, 0, 0, 1}` becomes `{0 ,0, 1, 1}`. You may modify and return the given array or make a new array.  
-**Signature**  `public static int[] zeroFront(int[] nums) `
+#### Arrays A3 - nthSmallest
+Given an unsorted array, create a function that returns the nth smallest integer (the smallest integer is the first smallest, the second smallest integer is the second smallest, etc).
+<br>**Signature** `public static int nthSmallest(int[] arr, int n)`
 
 
 ##### Examples
 ```
-zeroFront([1, 0, 0, 1]) → [0, 0, 1, 1]
-zeroFront([0, 1, 1, 0, 1]) → [0, 0, 1, 1, 1]
-zeroFront([1, 0]) → [0, 1]
+nthSmallest([1, 3, 5, 7], 1) ➞ 1
+nthSmallest([1, 3, 5, 7], 3) ➞ 5
+nthSmallest([1, 3, 5, 7], 5) ➞ -1
+nthSmallest([7, 3, 5, 1], 2) ➞ 3
 ```
 
-### Arrays - One Dimensional, 2 Loops
+
+### Arrays - Part B
 
 
-#### Array 4 - One Dimensional - Two Loops
-Given two arrays of ints sorted in increasing order, `outer` and `inner`, return true if all of the numbers in `inner` appear in `outer`. The best solution makes only a single "linear" pass of both arrays, taking advantage of the fact that both arrays are already in sorted order.  
-**Signature** `public static boolean linearIn(int[] outer, int[] inner)`
+#### Arrays B1 - puzzlePieces
+Write a function that takes two arrays and adds the first element in the first array with the first element in the second array, the second element in the first array with the second element in the second array, etc, etc. Return true if all element combinations add up to the same number. Otherwise, return false.
+<br> **Signature** public static boolean puzzlePieces(int[][] n)
+
+
+**Note:**
+* Each array will have at least one element.
+* Return false if both arrays are of different lengths.
 
 ##### Examples
 ```
-linearIn([1, 2, 4, 6], [2, 4]) → true
-linearIn([1, 2, 4, 6], [2, 3, 4]) → false
-linearIn([1, 2, 4, 4, 6], [2, 4]) → true
+puzzlePieces([1, 2, 3, 4], [4, 3, 2, 1]) ➞ true
+// 1 + 4 = 5;  2 + 3 = 5;  3 + 2 = 5;  4 + 1 = 5
+// Both arrays sum to [5, 5, 5, 5]
+
+puzzlePieces([1, 8, 5, 0, -1, 7], [0, -7, -4, 1, 2, -6]) ➞ true
+
+puzzlePieces([1, 2], [-1, -1]) ➞ false
+
+puzzlePieces([9, 8, 7], [7, 8, 9, 10]) ➞ false
 ```
 
+#### Array B2 - sameUnique
+Write a function that returns true if two arrays have the same number of unique elements, and false otherwise.
+<br>**Signature** public static boolean sameUnique(int[] a1, int[] a2)
 
-#### Array 5 - One Dimensional - Two Loops
-Given a non-empty array, return true if there is a place to split the array so that the sum of the numbers on one side is equal to the sum of the numbers on the other side.  
-**Signature**  `public static boolean canBalance(int[] nums)`
+<br>To illustrate:
+```
+arr1 = [1, 3, 4, 4, 4]
+arr2 = [2, 5, 7]
+```
+In `arr1`, the number 4 appears three times, which means it contains three unique elements: `[1, 3, 4]`. Since `arr1` and `arr2` both contain the same number of unique elements, this example would return `true`.
 
 ##### Examples
 ```
-canBalance([1, 1, 1, 2, 1]) → true
-canBalance([2, 1, 1, 2, 1]) → false
-canBalance([10, 10]) → true
+sameUnique([1, 3, 4, 4, 4], [2, 5, 7]) ➞ true
+sameUnique([9, 8, 7, 6], [4, 4, 3, 1]) ➞ false
+sameUnique([2], [3, 3, 3, 3, 3]) ➞ true
 ```
 
-#### Array 6 - One Dimensional - Two Loops
-Given n>=0, create an array with the pattern `{1,    1, 2,    1, 2, 3,   ... 1, 2, 3 .. n}` (spaces added to show the grouping). Note that the length of the array will be 1 + 2 + 3 ... + n, which is known to sum to exactly n*(n + 1)/2.  
-**Signature**  `public static int[] seriesUp(int n)`
+#### Array B3 - fulcrum
+A fulcrum of a list is an integer such that all elements to the left of it and all elements to the right of it sum to the same value. Write a function that finds the fulcrum of a list.
+<br>**Signature** public static int findFulcrum(int[] arr)
+
+<br> To illustrate:
+```
+findFulcrum([3, 1, 5, 2, 4, 6, -1]) ➞ 2
+// Since [3, 1, 5] and [4, 6, -1] both sum to 9
+```
+
 
 ##### Examples
 ```
-seriesUp(3) → [1, 1, 2, 1, 2, 3]
-seriesUp(4) → [1, 1, 2, 1, 2, 3, 1, 2, 3, 4]
-seriesUp(2) → [1, 1, 2]
+findFulcrum([1, 2, 4, 9, 10, -10, -9, 3]) ➞ 4
+findFulcrum([9, 1, 9]) ➞ 1
+findFulcrum([5, 4, 4, 4, 6, 6, 6]) ➞ -1
+findFulcrum([7, -1, 0, -1, 1, 1, 2, 3]) ➞ 0
+findFulcrum([8, 8, 8, 8]) ➞ -1
 ```
 
-### Arrays - Two Dimensional
-
-#### Array 7 - Two Dimensional
-Write a method that takes a 2D array and reverses all of the content in the 2D array. The last value should be the first, and the first value should be the last.  
-
-**Signature** `public static int[][] reverse(int[][] arr)`
-
-##### Example
-`reverse({{1,2,3},{4,5,6},{7,8,9}})` returns
-```
-[9,8,7]
-[6,5,4]
-[3,2,1]
-```
-
-#### Array 8 - Two Dimensional 
-Write a method that returns a portion of a 2D array based on a specified row and col.  
-**Signature** `public static int[][] split(int[][] arr, int row, int col)`  
-
-##### Example
-For example, the call `split({{1,2,3},{4,5,6},{7,8,9}}, 1, 1)` would return all elements up to that point in the 2D array: 
-```
-[1,2]
-[4,5]
-```
-
-#### Array 9 - Two Dimensional 
-Write a method that inverts a 2D array. Inverting a 2D array means that each row of the 2D array is now a column, and each column is now a row.  
-
-**Signature** `public static int[][] invert(int[][] arr)`  
-
-##### Example
-If we were to invert the 2D array:
-```
-[1,1,1]
-[2,2,2]
-[3,3,3]
-```
-
-the result would be:
-```
-[1,2,3]
-[1,2,3]
-[1,2,3] 
-```
+<br>**Notes***
+* If the fulcrum does not exist, return -1 (see example #3).
+* Exclude the leftmost and rightmost elements when computing the fulcrum (it doesn't make sense to sum zero values).
+* If a list has multiple fulcrums, return the one that occurs first.
